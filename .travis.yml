@@ -29,5 +29,4 @@ install:
   - ls bin/ -l
   - echo "TODO"
   - gem install dpl --pre
-  - dpl releases --token $GITHUB_TOKEN --file "bin/mycalculator-0.1-armeabi-v7a-debug.apk" --tag_name "v.0.1"
-  - echo "TODO 2"
+  - dpl releases --token $GITHUB_TOKEN --file "bin/myapp-0.1-armeabi-v7a-debug.apk" --tag_name "v.0.1"

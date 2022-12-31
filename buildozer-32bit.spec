@@ -1,10 +1,10 @@
 [app]
 
 # (str) Title of your application
-title = mycalculator
+title = MyApp
 
 # (str) Package name
-package.name = mycalculator
+package.name = myapp
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.wiseplat
@@ -36,17 +36,17 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy==2.0.0
+requirements = python3,kivy==2.0.0, kyvimd, https://github.com/kivymd/KiviMD/archive/3274b62.zip, sdl2_ttf=2.0.15
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
 # requirements.source.kivy = ../../kivy
 
 # (str) Presplash of the application
-#presplash.filename = %(source.dir)s/data/logo/presplash512okmin.png
+presplash.filename = %(source.dir)s/data/logo/presplash512okmin.png
 
 # (str) Icon of the application
-#icon.filename = %(source.dir)s/data/logo/logo512min.png
+icon.filename = %(source.dir)s/data/logo/logo512min.png
 
 # (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
 orientation = all
@@ -226,7 +226,7 @@ fullscreen = 0
 #android.copy_libs = 1
 
 # (str) The Android arch to build for, choices: armeabi-v7a, arm64-v8a, x86, x86_64
-android.arch = arm64-v8a
+android.arch = armeabi-v7a
 
 # (int) overrides automatic versionCode computation (used in build.gradle)
 # this is not the same as app version and should only be edited if you know what you're doing
@@ -308,7 +308,7 @@ ios.codesign.allowed = false
 [buildozer]
 
 # (int) Log level (0 = error only, 1 = info, 2 = debug (with command output))
-log_level = 1
+log_level = 2
 
 # (int) Display warning if buildozer is run as root (0 = False, 1 = True)
 warn_on_root = 1
