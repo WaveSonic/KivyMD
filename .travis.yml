@@ -32,13 +32,16 @@ install:
   - dpl releases --token $GITHUB_TOKEN --file "bin/myapp-0.1-armeabi-v7a-debug.apk" --tag_name "v.0.1"
   - echo "TODO COMPILE 64bit"
   - ls -l /home/travis/
+  - ls -l /home/travis/build/WaveSonic/myapp/
   - ls -la
   - rm -r -f .buildozer
   - ls -la
+  - rm -r -f /home/travis/build/WaveSonic/myapp/.buildozer
   - ls -l /home/travis/
+  - ls -l /home/travis/build/WaveSonic/myapp/
   - ls -l
   - yes | cp -f buildozer-64bit.spec buildozer.spec
-  - yes | travis_wait 20 buildozer android debug
+  - yes |travis_wait 20  buildozer android debug
   - ls -la
   - ls bin/ -l
   - echo "TODO"
